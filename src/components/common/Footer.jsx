@@ -18,20 +18,20 @@ const Footer = () => {
                               <Link className="text-lg" to="/">Shop</Link>
                            </li>
                            <li>
-                              <Link className="text-lg" to="/electronics">Electronics</Link>
+                              <Link className="text-lg" to="/?category=electronics">Electronics</Link>
                            </li>
                         </ul>
                      </div>
                      <div className="basis-6/12 text-center lg:text-left">
                         <ul>
                            <li>
-                              <Link className="text-lg" to="/mens-clothing">Mens</Link>
+                              <Link className="text-lg" to="/?category=mens-clothing">Mens</Link>
                            </li>
                            <li>
-                              <Link className="text-lg" to="/womens-clothing">Womens</Link>
+                              <Link className="text-lg" to="/?category=womens-clothing">Womens</Link>
                            </li>
                            <li>
-                              <Link className="text-lg" to="/jewelery">Jewellery</Link>
+                              <Link className="text-lg" to="/?category=jewelery">Jewellery</Link>
                            </li>
                         </ul>
                      </div>
