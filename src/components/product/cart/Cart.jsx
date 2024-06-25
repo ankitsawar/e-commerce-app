@@ -31,7 +31,7 @@ const Cart = () => {
    useEffect(() => {
       const timer = setTimeout(() => {
          setIsLoading(false)
-      }, 2000);
+      }, 1000);
       return () => clearTimeout(timer);
    }, []);
 
@@ -85,14 +85,15 @@ const Cart = () => {
                         </div>
                      )
                   }
+                  <div className='text-end text-xl font-semibold py-5'>
+                     Total ${getTotalPrice()}
+                  </div>
                </div>
             </>) : (
                <h3 className='text-xl font-normal'>Your Shoppig bag is empty <Link to="/" className='text-indigo-500'>Continue Shopping...</Link></h3>
             )
          }
-         <div className='text-end text-xl font-semibold py-5'>
-            Total ${getTotalPrice()}
-         </div>
+
       </div>
    )
 }

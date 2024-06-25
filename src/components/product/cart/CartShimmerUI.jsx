@@ -15,7 +15,6 @@ const CartShimmerUI = () => {
                <button className='px-4 bg-gray-300 w-[20px] h-20px] rounded' ></button>
             </div>
          </div>)
-
       }
       return eles;
    }

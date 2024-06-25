@@ -13,7 +13,7 @@ const Header = () => {
          <nav className="container mx-auto px-[15px]">
             <div className="flex justify-between items-center">
                <div className="flex items-center">
-                  <Link className="font-cormorant-garamond text-2xl" to="/">Logo</Link>
+                  <Link className="font-cormorant-garamond text-2xl font-medium" to="/">Logo</Link>
                </div>
                <div className="lg:hidden flex items-center">
                   <Link to="/cart" className="relative">

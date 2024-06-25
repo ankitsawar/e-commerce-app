@@ -1,7 +1,5 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
 const Quantity = ({ defaultValue, updateQuantity }) => {
-   const dispatch = useDispatch();
    const [quantity, setQuantity] = useState(defaultValue);
 
    return (

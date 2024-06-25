@@ -1,7 +1,9 @@
 import Landing from "./components/product/PLP/Landing";
-import Cart from "./components/product/cart/Cart";
 import Product from "./components/product/PDP/Product";
 import Layout from "./components/common/Layout";
+import { lazy, Suspense } from "react";
+
+const Cart = lazy(() => import("./components/product/cart/Cart"));
 
 const routes = [
    {
@@ -17,7 +19,7 @@ const routes = [
          },
          {
             path: "/cart",
-            element: <Cart />
+            element: <Suspense><Cart /></Suspense>
          }
       ],
    }

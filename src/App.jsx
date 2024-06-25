@@ -1,6 +1,6 @@
+import { Provider } from "react-redux";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import routes from "./Routes";
-import { Provider } from "react-redux";
 import store from "./store/Store";
 
 function App() {

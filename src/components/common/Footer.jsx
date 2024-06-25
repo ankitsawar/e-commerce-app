@@ -1,4 +1,3 @@
-import { MdFacebook } from "react-icons/md";
 import { FaTwitter, FaFacebookF, FaInstagram, FaYoutube, FaLinkedinIn } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
@@ -56,7 +55,6 @@ const Footer = () => {
                      </ul>
                   </div>
                </div>
-
             </div>
          </div>
          <div>
