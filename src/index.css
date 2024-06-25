@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+   .common-padding {
+      @apply pb-[60px] pt-[30px];
+   }
+}
