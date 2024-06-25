@@ -21,7 +21,6 @@ const Landing = () => {
    }, [searchParams]);
 
    const { isLoading, products, error } = useProducts(query);
-   console.log(error)
    if (isLoading) return <ListingShimmerUI />;
 
    return (

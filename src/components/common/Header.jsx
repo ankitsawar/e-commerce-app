@@ -3,7 +3,7 @@ import { HiBars3 } from "react-icons/hi2";
 import { IoBagSharp, IoCloseSharp } from "react-icons/io5";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { categories } from "../../utils/Constants";
+import Menu from "./Menu";
 
 const Header = () => {
    const [isOpen, setIsOpen] = useState(false);
@@ -27,18 +27,7 @@ const Header = () => {
                   </button>
                </div>
                <div className="hidden lg:flex">
-                  <ul className="hidden lg:flex">
-                     <li className="mx-3" key="shop-0">
-                        <Link className="text-[16px] text-[#54565A] leading-8 capitalize" to="/">Shop</Link>
-                     </li>
-                     {
-                        categories.map((category, i) => <li className="mx-3" key={category.name + "-" + i}>
-                           <Link className="text-[16px] text-[#54565A] leading-8 capitalize" to={`/?category=${category.slug}`}>
-                              {category.name}
-                           </Link>
-                        </li>)
-                     }
-                  </ul>
+                  <Menu menuClose={setIsOpen} />
                </div>
 
                <div className="hidden lg:flex">
@@ -54,15 +43,7 @@ const Header = () => {
                      className="lg:hidden text-3xl ml-4 text-gray-900 transition duration-300 focus:outline-none fixed top-5 right-3">
                      {!isOpen ? <HiBars3 /> : <IoCloseSharp />}
                   </button>
-                  <ul className="flex flex-col justify-center items-center w-full px-4">
-                     {
-                        categories.map((category, i) => <li className="mx-3 py-4" key={category.name + "-" + i}>
-                           <Link className="text-2xl text-[#54565A] leading-8 capitalize" to={`/?category=${category.slug}`}>
-                              {category.name}
-                           </Link>
-                        </li>)
-                     }
-                  </ul>
+                  <Menu menuClose={setIsOpen} />
                </div>
             </div>
          </nav>
