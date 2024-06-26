@@ -13,7 +13,7 @@ const Cart = () => {
    const cartItems = useSelector((store) => store.cart.items);
 
    const [quantity, setQuantity] = useState(1);
-   const [edit, setEdit] = useState(false);
+   const [edit, setEdit] = useState(null);
    const [show, setShow] = useState(false);
 
    const handleRemoveItem = (id) => dispatch(removeItem(id));
@@ -49,7 +49,6 @@ const Cart = () => {
          </h2>
          {
             cartItems.length > 0 ? (<>
-
                <div className='text-end'><button className='text-lg font-normal ml-auto text-red-600' onClick={handleClearCart}>Clear cart <FaCircleMinus className='inline' /></button></div>
                <div className=''>
                   {
@@ -66,7 +65,7 @@ const Cart = () => {
                            </div>
                            <div className='flex items-center'>
                               {
-                                 edit ?
+                                 edit === item.id ?
                                     <div className='flex items-center'>
                                        <Quantity defaultValue={item.quantity} productId={item.id} updateQuantity={setNewQuantity} />
                                        <button className='text-lg ml-4' onClick={() => handleQuantityChange(item.id)}>
@@ -76,7 +75,7 @@ const Cart = () => {
                                     :
                                     <>
                                        <span>{item.quantity}</span>
-                                       <button className='px-4 text-indigo-500' onClick={() => setEdit(true)}>
+                                       <button className='px-4 text-indigo-500' onClick={() => setEdit(item.id)}>
                                           <FaPencil />
                                        </button>
                                     </>
@@ -96,9 +95,8 @@ const Cart = () => {
                <h3 className='text-xl font-normal'>Your Shoppig bag is empty <Link to="/" className='text-indigo-500'>Continue Shopping...</Link></h3>
             )
          }
-
       </div>
    )
 }
 
-export default Cart
+export default Cart;

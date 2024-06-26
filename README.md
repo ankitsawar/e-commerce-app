@@ -1,8 +1,58 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+For Creating App
+   Vite as Bundeller
 
-Currently, two official plugins are available:
+Mock Api Platform
+   https://fakestoreapi.com/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Styling Approach
+   Desktop ---> Mobile
+   Used Tailwind CSS
+
+Test Casese Setup
+   React Testing Library
+   Jest
+   Babel Dependencies
+   Jest- npx jest --init
+   Jsdom library
+   @babel/preset-react - to make JSX work in test cases
+   @babel/preset-react inside my babel config
+   @testing-library/jest-dom
+
+Components
+   src
+      components
+         common
+            Header
+            Footer
+            Layout
+            Menu
+         PLP
+            LandingShimerUI
+            Landing
+               ProductCards
+         PDP
+            ProductShimmerUI
+            Product
+               Quantity
+         Cart
+            CartShimmerUI
+            Cart
+               Quantity
+      custom-hooks
+         useProduct
+         useProducts
+      utils
+         constants
+         helpers
+   
+Data Management
+   src
+      store
+         store
+         slice
+
+Test Cases
+   src
+      components
+         __test__
