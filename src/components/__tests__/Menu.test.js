@@ -1,12 +1,11 @@
+import '@testing-library/jest-dom';
 import { fireEvent, render, screen } from "@testing-library/react";
-import Menu from "../common/Menu";
 import { BrowserRouter } from "react-router-dom";
 import { categories } from "../../utils/Constants";
-import '@testing-library/jest-dom'
-
+import Menu from "../common/Menu";
 
 describe("Menu Component", () => {
-   test("should renders menu componet", () => {
+   it("should renders menu componet", () => {
 
       render(<BrowserRouter>
          <Menu />
@@ -18,7 +17,7 @@ describe("Menu Component", () => {
       })
    });
 
-   test("should call menuClose when shop link is clicked", () => {
+   it("should call menuClose when shop link is clicked", () => {
       const menuClose = jest.fn();
       render(<BrowserRouter>
          <Menu menuClose={menuClose} />

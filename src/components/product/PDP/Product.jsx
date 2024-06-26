@@ -31,9 +31,9 @@ const Product = () => {
                <img src={product.image} alt={product.title} className="h-full w-full" />
             </div>
             <div>
-               <h2 className="text-3xl font-bold mb-3">{product.title}</h2>
-               <p className="text-2xl font-semibold mb-3">${product.price}</p>
-               <p className="text-lg font-normal mb-4">{product.description}</p>
+               <h2 className="text-lg md:text-3xl font-bold mb-3">{product.title}</h2>
+               <p className="text-lg md:text-2xl font-semibold mb-3">${product.price}</p>
+               <p className="text-base md:text-lg font-normal mb-4">{product.description}</p>
                <div className="py-5">
                   <Quantity defaultValue={1} productId={product.id} updateQuantity={setNewQuantity} />
                </div>

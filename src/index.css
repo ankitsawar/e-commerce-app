@@ -7,3 +7,12 @@
       @apply pb-[60px] pt-[30px];
    }
 }
+
+@layer base {
+
+   input[type="number"]::-webkit-inner-spin-button,
+   input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+   }
+}

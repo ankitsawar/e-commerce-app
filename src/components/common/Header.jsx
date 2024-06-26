@@ -7,7 +7,13 @@ import Menu from "./Menu";
 
 const Header = () => {
    const [isOpen, setIsOpen] = useState(false);
-   const cartCount = useSelector(store => store.cart.items.length);
+
+   const cartItems = useSelector(store => store.cart.items);
+   const cartCount = cartItems.reduce(
+      (accumulator, currentValue) => accumulator + currentValue.quantity,
+      0,
+   )
+
    return (
       <header className="h-[60px] w-screen shadow-md flex items-center fixed bg-white">
          <nav className="container mx-auto px-[15px]">
@@ -21,9 +27,9 @@ const Header = () => {
                      <span className="flex w-4 h-4 text-center items-center justify-center text-[12px] rounded-full border border-gray-400 absolute -right-2 -top-2">{cartCount}</span>
                   </Link>
 
-                  <button aria-label="navigation" type="button" onClick={() => setIsOpen(!isOpen)}
+                  <button aria-label="hamburger-btn" type="button" onClick={() => setIsOpen(!isOpen)}
                      className="lg:hidden text-2xl ml-4 text-gray-900 transition duration-300 focus:outline-none">
-                     {!isOpen ? <HiBars3 /> : <IoCloseSharp />}
+                     {!isOpen && <HiBars3 />}
                   </button>
                </div>
                <div className="hidden lg:flex">
@@ -39,9 +45,9 @@ const Header = () => {
 
                {/* MOBILE MENU  */}
                <div id="mobileMenu" className={`w-full mx-auto py-8 text-center h-[100vh] fixed bg-[#ffffff] shadow-md top-0 left-0 ${isOpen ? 'flex' : 'hidden'}`}>
-                  <button aria-label="navigation" type="button" onClick={() => setIsOpen(!isOpen)}
+                  <button aria-label="close-btn" type="button" onClick={() => setIsOpen(!isOpen)}
                      className="lg:hidden text-3xl ml-4 text-gray-900 transition duration-300 focus:outline-none fixed top-5 right-3">
-                     {!isOpen ? <HiBars3 /> : <IoCloseSharp />}
+                     {!isOpen && <IoCloseSharp />}
                   </button>
                   <Menu menuClose={setIsOpen} />
                </div>

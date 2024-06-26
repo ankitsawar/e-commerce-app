@@ -74,9 +74,12 @@ const Cart = () => {
                                        </button>
                                     </div>
                                     :
-                                    <button className='px-4 text-indigo-500' onClick={() => setEdit(true)}>
-                                       <FaPencil />
-                                    </button>
+                                    <>
+                                       <span>{item.quantity}</span>
+                                       <button className='px-4 text-indigo-500' onClick={() => setEdit(true)}>
+                                          <FaPencil />
+                                       </button>
+                                    </>
                               }
                               <button className='px-4 text-pink-900' onClick={() => handleRemoveItem(item.id)}>
                                  <FaTrashCan />

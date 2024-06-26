@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import Footer from "../common/Footer";
 import { BrowserRouter } from "react-router-dom";
 
-test("should load a footer component", () => {
+it("should load a footer component", () => {
    render(<BrowserRouter>
       <Footer />
    </BrowserRouter>
