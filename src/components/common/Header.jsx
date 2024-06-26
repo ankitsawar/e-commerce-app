@@ -47,7 +47,7 @@ const Header = () => {
                <div id="mobileMenu" className={`w-full mx-auto py-8 text-center h-[100vh] fixed bg-[#ffffff] shadow-md top-0 left-0 ${isOpen ? 'flex' : 'hidden'}`}>
                   <button aria-label="close-btn" type="button" onClick={() => setIsOpen(!isOpen)}
                      className="lg:hidden text-3xl ml-4 text-gray-900 transition duration-300 focus:outline-none fixed top-5 right-3">
-                     {!isOpen && <IoCloseSharp />}
+                     {isOpen && <IoCloseSharp />}
                   </button>
                   <Menu menuClose={setIsOpen} />
                </div>
